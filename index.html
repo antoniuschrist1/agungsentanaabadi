@@ -1,0 +1,258 @@
+<!-- File: index.html
+     Agung Sentana Abadi — Crypto (Modern Tech Startup) - Single page, ready to upload
+     Replace placeholders: YOUR_LOGO_URL, hello@yourdomain.com, social links, and any images.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agung Sentana Abadi — Crypto & Blockchain</title>
+  <meta name="description" content="Agung Sentana Abadi — building secure, AI-powered crypto infrastructure and DeFi solutions." />
+  <style>
+    /* Minimal modern styling — single-file, simple, neutral */
+    :root{
+      --bg:#0f1720;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#5eead4; /* mint */
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:#e6eef6;
+      background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--maxw)}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo {
+      width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#0ea5a4, #06b6d4);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#02121a;font-size:14px;
+      box-shadow:0 6px 18px rgba(6,11,22,0.6), inset 0 -6px 18px rgba(255,255,255,0.02);
+    }
+    h1{font-size:20px;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    main{display:grid;grid-template-columns:1fr;gap:22px}
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:28px;border-radius:var(--radius);backdrop-filter: blur(6px);
+      display:flex;flex-direction:column;gap:18px;
+    }
+    .hero-top{display:flex;flex-direction:column;gap:12px}
+    .kicker{display:inline-block;background:rgba(94,234,212,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    h2{margin:0;font-size:28px;line-height:1.05}
+    .hero-sub{color:var(--muted);font-size:15px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      background:linear-gradient(90deg,var(--accent), #34d399);
+      color:#042024;padding:10px 16px;border-radius:10px;font-weight:700;border:none;cursor:pointer;
+      box-shadow:0 8px 24px rgba(5,8,12,0.5);
+      text-decoration:none;
+    }
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+    .features{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;
+    }
+    .card{
+      background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 6px 20px rgba(3,8,14,0.6);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .product{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:12px;
+    }
+    .stats{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;min-width:120px;text-align:center}
+    .stat b{display:block;font-size:18px}
+    footer{margin-top:18px;padding:18px;border-radius:10px;color:var(--muted);font-size:13px;background:transparent}
+    .small{font-size:13px;color:var(--muted)}
+    .contact-card{display:flex;flex-direction:column;gap:12px}
+    .socials{display:flex;gap:8px}
+    .socials a{color:var(--muted);text-decoration:none;font-weight:700;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    @media (max-width:880px){
+      .two-col{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">ASA</div>
+        <div>
+          <h1>Agung Sentana Abadi</h1>
+          <p class="lead">Crypto · Blockchain · DeFi — Modern infrastructure for a borderless economy</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-top">
+          <span class="kicker">Crypto · AI-Integrated · Decentralized</span>
+          <h2 id="hero-title">Secure, scalable crypto infrastructure designed for the next generation of finance.</h2>
+          <p class="hero-sub">We build AI-enhanced trading systems, blockchain infrastructure, and DeFi tooling that companies and users can trust. Fast integrations, clean APIs, and enterprise-grade security.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#products">Our solutions</a>
+        </div>
+
+        <div class="features" aria-hidden="false">
+          <div class="card">
+            <h3>AI-powered Exchange Engines</h3>
+            <p>Low-latency matching, risk controls, and analytics powered by Isaiah Empire’s AI stack for smarter liquidity and order management.</p>
+          </div>
+          <div class="card">
+            <h3>Blockchain Infrastructure</h3>
+            <p>Custom chains, sidechains, and smart-contract platforms built for throughput, cost-efficiency, and regulatory readiness.</p>
+          </div>
+          <div class="card">
+            <h3>DeFi & Tokenization</h3>
+            <p>Audited smart contracts, token design, staking/LP mechanisms, and governance frameworks to launch reliable DeFi services.</p>
+          </div>
+          <div class="card">
+            <h3>Digital Asset Management</h3>
+            <p>Secure custody integrations, portfolio analytics, and AI-driven signals for teams and retail users.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col" id="products" aria-labelledby="products-title">
+        <div class="product">
+          <h2 id="products-title">Solutions built for teams and builders</h2>
+          <p class="small">From white-label exchange stacks to audited DeFi protocols and enterprise blockchain — we deliver end-to-end systems with production security.</p>
+
+          <div style="height:18px"></div>
+
+          <div class="card" style="margin-bottom:12px">
+            <h3>White-label Exchange</h3>
+            <p>Custom front-end, robust matching engine, KYC-ready flows, and secure settlement rails. Deploy locally or globally.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:12px">
+            <h3>Token & DeFi Launchpad</h3>
+            <p>Design token economics, launch liquidity mechanisms, and manage community governance with built-in safety checks and audits.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:12px">
+            <h3>Blockchain-as-a-Service</h3>
+            <p>Private chains, sidechain bridges, interoperability tools, and smart-contract lifecycle management for enterprise workloads.</p>
+          </div>
+
+          <div class="card" style="margin-bottom:12px">
+            <h3>Analytics & Risk</h3>
+            <p>Real-time market telemetry, AI-driven monitoring, and automated risk mitigation to protect users and liquidity providers.</p>
+          </div>
+
+        </div>
+
+        <aside class="card contact-card" id="contact" aria-labelledby="contact-title">
+          <h3 id="contact-title">Contact & Partnerships</h3>
+          <p class="small">Interested in a pilot, integration, or partnership? Send us a short message and we’ll reply within 48 hours.</p>
+
+          <div>
+            <strong>Email</strong>
+            <div class="small">hello@yourdomain.com</div>
+          </div>
+
+          <div>
+            <strong>Headquarters</strong>
+            <div class="small">Medan, Indonesia (remote-friendly)</div>
+          </div>
+
+          <div>
+            <strong>Quick stats</strong>
+            <div class="stats" style="margin-top:8px">
+              <div class="stat"><b>99.99%</b><span class="small"> Uptime targets</span></div>
+              <div class="stat"><b>2ms</b><span class="small"> Matching latency (engine)</span></div>
+              <div class="stat"><b>AUDITED</b><span class="small"> Contracts & security</span></div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <a class="btn" href="mailto:hello@yourdomain.com">Email us</a>
+            <a class="btn ghost" href="#home">Request proposal</a>
+          </div>
+
+          <div style="margin-top:8px">
+            <div class="small">Follow</div>
+            <div class="socials" style="margin-top:6px">
+              <a href="#" aria-label="twitter">Twitter</a>
+              <a href="#" aria-label="linkedin">LinkedIn</a>
+              <a href="#" aria-label="github">GitHub</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" id="vision" aria-labelledby="vision-title">
+        <h2 id="vision-title">Vision</h2>
+        <p class="small">We build infrastructure that makes crypto practical, secure, and accessible. Our products connect to human use-cases — payments, asset management, and transparent financial systems — while maintaining enterprise-grade security and compliance readiness.</p>
+      </section>
+
+      <footer>
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+          <div>
+            <strong>Agung Sentana Abadi</strong> <span class="small">— Crypto & Blockchain</span>
+            <div class="small" style="margin-top:6px">© <span id="yr"></span> Agung Sentana Abadi. All rights reserved.</div>
+          </div>
+          <div class="small">Built with a modern stack · Neutral design</div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    // small helpers: set year, replace placeholders easily
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Optional: quick replacement helper if hosting replaces placeholders dynamically
+    // Example: set email via URL param ?email=hello@domain.com
+    (function(){
+      function param(name){ return new URLSearchParams(location.search).get(name) }
+      const email = param('email');
+      if(email){
+        const emailEls = document.querySelectorAll('a[href^="mailto:"], .contact-card .small');
+        for(const el of emailEls){
+          if(el.tagName === 'A' && el.href.startsWith('mailto:')){
+            el.href = 'mailto:' + email;
+            el.textContent = email;
+          } else if(el.textContent && el.textContent.includes('@yourdomain.com')){
+            el.textContent = email;
+          }
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
